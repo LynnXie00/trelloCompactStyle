@@ -1,0 +1,176 @@
+/* ==UserStyle==
+@name           trello board
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A board-style of trello, column-wrap
+@author         Lynn Xie
+==/UserStyle== */
+
+@-moz-document url-prefix("https://trello.com/b/") {
+    #board{
+        display:flex !important;
+        flex-direction:column;
+        flex-wrap:wrap;
+        justify-content:flex-start;
+        align-items:flex-start;
+        align-content:flex-start;
+        text-align:left;    
+        position:relative !important;
+        max-height:600px;
+        padding-bottom: 24px;
+        
+    }
+    .board-header{
+       display:flex !important;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:flex-start;
+        align-items:flex-start;
+        align-content:flex-start;
+        text-align:left;          
+    }
+    .board-header-btns{
+        display:flex !important;
+        flex-direction:row;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        align-items:flex-start;
+        align-content:flex-start;
+        text-align:left; 
+    }
+    .js-react-root{
+        display:flex !important;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:flex-start;
+        align-items:flex-start;
+        align-content:flex-start;
+        text-align:left; 
+    }
+    .board-canvas{
+        height:auto !important
+    }
+    .body-board-view{
+        overflow-y:visible
+    }
+
+    .js-list, .js-add-list{
+        display:flex !important;
+        vertical-align:top;
+        margin:0 0 20px 20px;
+        overflow-y:scroll;
+        scrollbar-width: none; 
+        max-height:560px;
+        
+    }
+    .u-gutter{
+        margin-left:0;
+    }
+    
+    .list-card{
+        padding:0px;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:stretch;
+        align-content:stretch;
+        column-gap:0px;
+        
+    }
+
+    .list-card-details{
+        padding:0px;
+        display:flex;
+        flex-direction:row;
+        flex-grow:1;
+        justify-content:flex-start;
+        align-items:stretch;
+        column-gap:10px;
+        min-height:25px;
+    }
+    
+    .list-card-title {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-top:auto;
+        margin-bottom:auto;
+        flex-grow:1;
+        
+    }
+    .list-card-front-labels-container > div{
+        height:100%;
+    }
+    .list-card-front-labels-container > div > div{
+        height:100%;
+        min-height: 100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:stretch;
+        align-content:stretch;
+        row-gap:0px;
+
+    }
+    .list-card-front-labels-container > div > div > div {
+        min-width:8px;
+        flex-grow: 1; 
+        margin:0px;
+        align-self:flex-start;
+        display:block;
+        
+    }
+    .list-card-front-labels-container > div > div > div > button{
+        min-width:8px;
+        max-width:8px;
+        margin:0px;
+        height:100%!important;
+        border-radius: 0px;
+    }
+    .badges{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:nowrap;
+
+
+    }
+
+    .badges >div{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:nowrap;
+        overflow:hidden;
+    }
+
+    .badge-text{
+        display:none;
+    }
+    .badge{
+        max-width:15px;
+        max-height:15px;
+        width:15px;
+        padding:2px;
+        margin:0px;
+    }
+    .icon-sm {
+        width:15px;
+        height:15px;
+        font-size:15px;
+        padding:1px;
+        margin:0px;
+    }
+    .icon-sm :before{
+        width:15px;
+        height:15px;
+        font-size:15px;
+        padding:1px;
+        margin:0px;
+    }
+    .list-card-members {
+        display:none;
+    }
+    .list-card-operation{
+        position:relative;
+        order:7;
+    }
+}
